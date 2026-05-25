@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sabor de Casa — Marmitas & Bolos de Pote</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,700;0,900;1,700&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<nav class="navbar" id="navbar">
+  <div class="nav-logo">Sabor<span>de Casa</span></div>
+  <button class="hamburger" id="hamburger" aria-label="Menu">
+    <span></span><span></span><span></span>
+  </button>
+  <ul class="nav-links" id="navLinks">
+    <li><a href="#cardapio" onclick="closeMenu()">Cardápio</a></li>
+    <li><a href="#combos" onclick="closeMenu()">Combos</a></li>
+    <li><a href="#bolos" onclick="closeMenu()">Bolos de Pote</a></li>
+    <li><a href="#info" onclick="closeMenu()">Informações</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="cart-btn" onclick="toggleCart()">
+      🛒 Carrinho
+      <span class="cart-badge" id="cartBadge">0</span>
+    </button>
+  </div>
+</nav>
+
+<section class="hero" id="home">
+  <div class="hero-bg"></div>
+  <div class="hero-blobs">
+    <div class="blob blob-1"></div>
+    <div class="blob blob-2"></div>
+    <div class="blob blob-3"></div>
+  </div>
+  <div class="hero-content">
+    <div class="hero-badge">🍽️ Feito com muito carinho</div>
+    <h1>Marmitas e Bolos de Pote caseiros<br><em>de verdade,</em><br>pertinho de você!</h1>
+    <p class="hero-desc">Marmitas, práticas e deliciosas — preparadas com ingredientes frescos todos os dias. Peça o seu combo e receba com praticidade!</p>
+    <div class="hero-actions">
+      <a href="#cardapio" class="btn-primary">Ver cardápio 🍛</a>
+      <a href="#combos" class="btn-outline">Ver combos 🎁</a>
+    </div>
+  </div>
+  <div class="hero-image-area">
+    <div class="hero-illustration">
+      <div class="hero-glow"></div>
+      <div class="hero-dishes">
+        <svg class="dish-plate-svg" width="280" height="200" viewBox="0 0 280 200" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="140" cy="185" rx="110" ry="10" fill="rgba(61,35,20,0.08)"/>
+          <ellipse cx="140" cy="155" rx="118" ry="22" fill="#D4956A"/>
+          <ellipse cx="140" cy="148" rx="118" ry="22" fill="#E8A87A"/>
+          <ellipse cx="140" cy="142" rx="115" ry="20" fill="#F5C89A"/>
+          <ellipse cx="140" cy="138" rx="110" ry="16" fill="#FAE0C0"/>
+          <ellipse cx="140" cy="134" rx="104" ry="13" fill="#FFF5E8"/>
+          <ellipse cx="140" cy="132" rx="100" ry="11" fill="white"/>
+          <rect x="40" y="80" width="200" height="55" rx="4" fill="#4A7C59"/>
+          <rect x="40" y="80" width="200" height="8" rx="4" fill="#5A9C6E"/>
+          <ellipse cx="90" cy="107" rx="38" ry="28" fill="#F4A261"/>
+          <ellipse cx="90" cy="104" rx="35" ry="24" fill="#E07B3A"/>
+          <ellipse cx="90" cy="101" rx="30" ry="20" fill="#C85A20"/>
+          <circle cx="82" cy="98" r="5" fill="#A03810"/>
+          <circle cx="96" cy="103" r="4" fill="#A03810"/>
+          <circle cx="85" cy="108" r="3" fill="#A03810"/>
+          <ellipse cx="170" cy="107" rx="38" ry="26" fill="#E8D5A0"/>
+          <ellipse cx="170" cy="104" rx="34" ry="22" fill="#F0E0A8"/>
+          <ellipse cx="158" cy="100" rx="8" ry="6" fill="#D4B870"/>
+          <ellipse cx="172" cy="98" rx="7" ry="5" fill="#C8A860"/>
+          <ellipse cx="183" cy="102" rx="6" ry="5" fill="#D4B870"/>
+          <ellipse cx="163" cy="110" rx="7" ry="5" fill="#C8A860"/>
+          <ellipse cx="178" cy="109" rx="8" ry="5" fill="#D4B870"/>
+          <rect x="42" y="118" width="196" height="18" rx="3" fill="#3A6B48"/>
+          <rect x="42" y="118" width="196" height="6" rx="3" fill="#4A8058"/>
+        </svg>
+        <svg class="bolo-pote-svg" width="140" height="170" viewBox="0 0 140 170" xmlns="http://www.w3.org/2000/svg">
+          <ellipse cx="70" cy="158" rx="54" ry="7" fill="rgba(61,35,20,0.1)"/>
+          <rect x="18" y="68" width="104" height="82" rx="6" fill="#D4956A"/>
+          <rect x="20" y="70" width="100" height="78" rx="5" fill="#E8A87A"/>
+          <rect x="22" y="72" width="96" height="74" rx="4" fill="#FAE0C0"/>
+          <rect x="24" y="100" width="92" height="46" rx="3" fill="#F5C89A"/>
+          <rect x="26" y="100" width="88" height="44" rx="3" fill="#FFF0D8"/>
+          <ellipse cx="70" cy="100" rx="46" ry="10" fill="#F5C89A"/>
+          <ellipse cx="70" cy="98" rx="44" ry="9" fill="#FAE0C0"/>
+          <ellipse cx="70" cy="96" rx="42" ry="8" fill="#E8C090"/>
+          <ellipse cx="70" cy="93" rx="40" ry="7" fill="#D4A070"/>
+          <ellipse cx="70" cy="90" rx="38" ry="6" fill="#C4522A"/>
+          <path d="M 32 90 Q 45 75 58 85 Q 68 92 80 78 Q 90 68 108 82" stroke="#9D3F1F" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <circle cx="55" cy="86" r="5" fill="#E8A838" opacity="0.9"/>
+          <circle cx="72" cy="82" r="4" fill="#E8A838" opacity="0.9"/>
+          <circle cx="88" cy="87" r="5" fill="#E8A838" opacity="0.9"/>
+          <rect x="16" y="62" width="108" height="14" rx="7" fill="#C4522A"/>
+          <rect x="38" y="50" width="64" height="16" rx="8" fill="#B84020"/>
+          <circle cx="70" cy="44" r="5" fill="#E8A838"/>
+          <circle cx="70" cy="43" r="3" fill="#F5C76A"/>
+          <ellipse cx="70" cy="148" rx="44" ry="6" fill="#E8A87A"/>
+          <rect x="28" y="130" width="84" height="18" rx="4" fill="#C4522A"/>
+          <text x="70" y="143" text-anchor="middle" font-family="'DM Sans', sans-serif" font-size="8" font-weight="700" fill="white" letter-spacing="0.5">BOLO DE POTE</text>
+        </svg>
+      </div>
+      <svg class="deco-leaf" style="top:-20px;right:-10px;width:60px;height:60px;" viewBox="0 0 60 60" xmlns="http://www.w3.org/2000/svg">
+        <path d="M30 5 Q50 20 45 40 Q30 55 15 40 Q10 20 30 5Z" fill="rgba(122,140,94,0.3)"/>
+        <line x1="30" y1="8" x2="30" y2="48" stroke="rgba(122,140,94,0.5)" stroke-width="1.5"/>
+      </svg>
+    </div>
+  </div>
+</section>
+
+<section class="cardapio" id="cardapio">
+  <div class="section-header reveal">
+    <div class="section-label">Cardápio</div>
+    <p class="section-desc">Escolha sua marmita favorita, feita com ingredientes de ótima qualidade e preparo especial.
+    Porções individuais servidas em embalagens de 500ml.</p>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+
+<section class="combos-section" id="combos">
+  <div class="section-header reveal">
+    <div class="section-label">Combos especiais</div>
+    <h2 class="section-title">Economize mais<br>pedindo em combo</h2>
+    <p class="section-desc">Monte seu pacotão e pague menos por marmita. Perfeito para a semana toda!</p>
+  </div>
+  <div class="combos-grid" id="combosGrid"></div>
+</section>
+
+<section class="bolos-section" id="bolos">
+  <div class="section-header reveal">
+    <div class="section-label">Doce para finalizar</div>
+    <h2 class="section-title">Bolos de Pote<br><em>artesanais</em></h2>
+    <p class="section-desc">A sobremesa perfeita para adoçar o seu almoço ou jantar. Peça junto com sua marmita ou separado!</p>
+  </div>
+  <div class="bolos-grid" id="bolosGrid"></div>
+</section>
+
+<div class="info-section" id="info">
+  <div class="info-grid">
+    <div class="info-item reveal">
+      <div class="info-icon">🕐</div>
+      <div class="info-title">Horário de pedidos</div>
+      <div class="info-text">Peça até as 20h para receber no dia seguinte. Entregas de seg. a sab.</div>
+    </div>
+    <div class="info-item reveal reveal-delay-1">
+      <div class="info-icon">🛵</div>
+      <div class="info-title">Entrega</div>
+      <div class="info-text">Entregamos na região central. Taxa de entrega conforme localidade.</div>
+    </div>
+    <div class="info-item reveal reveal-delay-2">
+      <div class="info-icon">💳</div>
+      <div class="info-title">Formas de pagamento</div>
+      <div class="info-text">Pix, dinheiro ou cartão na entrega. Combinar via WhatsApp.</div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p>© 2025 <strong>Sabor de Casa</strong> — Marmitas & Bolos de Pote. Feito com ❤️ e muito tempero.</p>
+</footer>
+
+<!-- MODAL DE COMBO -->
+<div class="modal-overlay" id="comboModalOverlay" onclick="handleModalOverlayClick(event)">
+  <div class="modal" id="comboModal">
+    <div class="modal-header">
+      <div class="modal-title-row">
+        <div>
+          <div class="modal-title" id="modalTitle">Monte seu combo</div>
+          <div class="modal-subtitle" id="modalSubtitle"></div>
+        </div>
+        <button class="modal-close" onclick="closeComboModal()">✕</button>
+      </div>
+      <div class="modal-progress">
+        <div class="progress-bar-track">
+          <div class="progress-bar-fill" id="progressFill" style="width:0%"></div>
+        </div>
+        <div class="progress-label" id="progressLabel">0 / 0</div>
+      </div>
+    </div>
+    <div class="modal-body" id="modalBody"></div>
+    <div class="modal-footer">
+      <div class="modal-error" id="modalError">
+        <span>⚠️</span>
+        <span id="modalErrorText"></span>
+      </div>
+      <div class="modal-total-row">
+        <div>
+          <div class="modal-total-label">Total do combo</div>
+          <div class="modal-total-discount" id="modalDiscount"></div>
+        </div>
+        <div class="modal-total-value" id="modalTotal">R$ 0,00</div>
+      </div>
+      <button class="modal-confirm-btn" id="modalConfirmBtn" onclick="confirmCombo()" disabled>
+        🛒 Adicionar ao carrinho
+      </button>
+    </div>
+  </div>
+</div>
+
+<div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+<div class="cart-sidebar" id="cartSidebar">
+  <div class="cart-header">
+    <div class="cart-title">🛒 Seu pedido</div>
+    <button class="cart-close" onclick="toggleCart()">✕</button>
+  </div>
+  <div class="cart-items" id="cartItems">
+    <div class="cart-empty">
+      <div class="cart-empty-icon">🍽️</div>
+      <p>Seu carrinho está vazio</p>
+      <p style="font-size:0.85rem">Adicione itens do cardápio!</p>
+    </div>
+  </div>
+  <div class="cart-footer" id="cartFooter" style="display:none">
+    <div class="cart-total-row">
+      <span class="cart-total-label">Total do pedido</span>
+      <span class="cart-total-value" id="cartTotal">R$ 0,00</span>
+    </div>
+    <div class="cart-note">
+      <label>📝 Observações do pedido</label>
+      <input type="text" id="cartObs">
+    </div>
+    <button class="whatsapp-btn" onclick="sendWhatsApp()">
+      <svg width="22" height="22" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+      Enviar pedido pelo WhatsApp
+    </button>
+  </div>
+</div>
+
+<div class="wa-widget" id="waWidget">
+  <div class="wa-bubble" id="waBubble">
+    <strong>Olá! 👋</strong>
+    Fale comigo pelo WhatsApp!
+  </div>
+  <button class="wa-btn" onclick="openWhatsApp()" title="Conversar no WhatsApp">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  </button>
+</div>
+
+<div class="toast-container" id="toastContainer"></div>
+
+<script src="script.js"></script>
+</body>
+</html>
