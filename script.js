@@ -32,11 +32,10 @@ const combos = [
 ];
 
 const bolos = [
-  { id: 'b1', emoji: '🍫', name: 'Nutella', desc: 'Massa fofinha com o sabor irresistível da Nutella, trazendo muito chocolate e cremosidade em cada colherada', price: 14.90 },
-  { id: 'b2', emoji: '🍫', name: 'Negrinho', desc: 'Clássico sabor de brigadeiro com massa macia e cobertura cremosa de chocolate', price: 11.50 },
-  { id: 'b3', emoji: '🤍', name: 'Branquinho', desc: 'Delicado e cremoso, feito com brigadeiro branco e um sabor suave que conquista qualquer um', price: 11.50 },
-  { id: 'b4', emoji: '🍓', name: 'Morango com Leite Ninho', desc: 'Combinação perfeita do doce do leite ninho com a leveza e o frescor do morango', price: 13.90 },
-  { id: 'b5', emoji: '🥕', name: 'Cenoura', desc: 'Bolo de cenoura fofinho e saboroso, acompanhado de uma deliciosa cobertura de chocolate', price: 11.50 },
+  { id: 'b1', emoji: '🍫', name: 'Creme de avelã com Ninho', desc: 'Massa fofinha com o sabor irresistível do avelã, trazendo muito chocolate e cremosidade em cada colherada', price: 10, img: './assets/creme_avela_ninho.jpeg' },
+  { id: 'b2', emoji: '🍫', name: 'Brigadeiro', desc: 'Clássico sabor de brigadeiro com massa macia e cobertura cremosa de chocolate', price: 8, img: './assets/brigadeiro.jpeg' },
+  { id: 'b3', emoji: '🤍', name: 'Beijinho com coco', desc: 'Delicado e cremoso, feito com brigadeiro branco e um sabor suave que conquista qualquer um', price: 8, img: './assets/beijinho_coco.jpeg' },
+  { id: 'b4', emoji: '🍓', name: 'Morango com Leite Ninho', desc: 'Combinação perfeita do doce do leite ninho com a leveza e o frescor do morango', price: 10, img: './assets/morango_ninho.jpeg' },
 ];
 
 let cart = [];
@@ -129,7 +128,9 @@ function renderBolos() {
   const grid = document.getElementById('bolosGrid');
   grid.innerHTML = bolos.map(b => `
     <div class="bolo-card reveal">
-      <div class="bolo-img" style="background: linear-gradient(135deg, #FFF3E0, #FFE0B2)">${b.emoji}</div>
+      <div class="bolo-img-wrap">
+        <img class="bolo-img-photo" src="${b.img}" alt="${b.name}" loading="lazy" />
+      </div>
       <div class="bolo-body">
         <div class="bolo-name">${b.name}</div>
         <div class="bolo-desc">${b.desc}</div>
