@@ -1,32 +1,31 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm1', emoji: '🍗', name: 'Frango Grelhado', desc: 'Arroz branco, feijão, purê de batata, frango grelhado temperado', price: 21.90, flavor: 'Clássico' },
-  { id: 'm2', emoji: '🥩', name: 'Carne de Panela', desc: 'Arroz branco, feijão, batata cozida, cenoura refogada, carne de panela com molho vermelho', price: 25.90, flavor: 'Tradicional' },
-  { id: 'm3', emoji: '🍝', name: 'Macarrão com Almôndega', desc: 'Macarrão ao molho vermelho, almôndega caseira, OPCIONAL: Queijo ralado', price: 23.90, flavor: 'Especial' },
-  { id: 'm4', emoji: '🥦', name: 'Vegetariana', desc: 'Arroz branco, feijão, legumes refogados', price: 19.90, flavor: 'Vegano' }
+  { id: 'm2', emoji: '🥩', name: 'Carne de Panela', desc: 'Arroz branco, feijão, batata, cenoura, carne de panela feita pressão, macia e cheia de sabor', price: 18, flavor: 'Especial', img: './assets/marmita_carne_panela.jpeg' },
+  { id: 'm1', emoji: '🍗', name: 'Strogonoff de frango', desc: 'Arroz branco, feijão, purê de batata, frango grelhado temperado', price: 15, flavor: "Clássico", img: './assets/marmita_strogonoff.jpeg' },
+  { id: 'm3', emoji: '🍝', name: 'Macarrão com Almôndega', desc: 'Macarrão ao molho vermelho e deliciosas almôndega caseira', price: 12, flavor: "Econômico", img: './assets/marmita_massa_almondega.jpeg' },
 ];
 
 const combos = [
   {
-    id: 'c1', emoji: '📦', name: 'Combo 5 Marmitas', subtitle: 'Perfeito para a semana toda',
+    id: 'c1', emoji: '📦', name: 'Combo Semana', subtitle: '5 marmitas — perfeito para a semana toda',
     items: ['5 marmitas à sua escolha', 'Variações de sabor liberadas', 'Entrega única no mesmo endereço', 'Cardápio disponível via WhatsApp'],
-    discountPerUnit: 4.00,
+    discountPct: 0.07,
     marmitaQty: 5, boloQty: 0,
     featured: false,
   },
   {
-    id: 'c2', emoji: '💼', name: 'Combo CLT', subtitle: '22 marmitas — um mês cheio!',
-    items: ['22 marmitas (dias úteis)', 'Entrega diária ou semanal', 'Cardápio rotativo incluso', 'Desconto especial no total'],
-    discountPerUnit: 6.00,
-    marmitaQty: 22, boloQty: 0,
-    featured: true, badge: 'Mais vendido',
+    id: 'c4', emoji: '🍱', name: 'Combo 10', subtitle: '10 marmitas',
+    items: ['10 marmitas à sua escolha', 'Variações de sabor liberadas', 'Entrega em até 2x no mesmo endereço', 'Desconto especial por unidade'],
+    discountPct: 0.12,
+    marmitaQty: 10, boloQty: 0,
+    featured: true, badge: 'Mais vendido'
   },
   {
-    id: 'c3', emoji: '🎂', name: 'Combo Marmita + Bolo', subtitle: 'Almoço completo com sobremesa',
-    items: ['1 marmita à escolha', '1 bolo de pote à escolha', 'Sabores disponíveis do dia', 'Entrega conjunta'],
-    discountPerUnit: 2.00,
-    marmitaQty: 1, boloQty: 1,
+    id: 'c2', emoji: '💼', name: 'Combo CLT', subtitle: '22 marmitas — um mês cheio!',
+    items: ['22 marmitas (dias úteis)', 'Entrega diária ou semanal', 'Cardápio rotativo incluso', 'Desconto especial no total'],
+    discountPct: 0.15,
+    marmitaQty: 22, boloQty: 0,
     featured: false,
   },
 ];
@@ -53,8 +52,7 @@ function comboFromPrice(combo) {
   const minM = getMinPrice(cardapio);
   const minB = combo.boloQty > 0 ? getMinPrice(bolos) : 0;
   const base = minM * combo.marmitaQty + minB * combo.boloQty;
-  const disc = combo.discountPerUnit * (combo.marmitaQty + combo.boloQty);
-  return Math.max(0, base - disc);
+  return Math.max(0, base * (1 - combo.discountPct));
 }
 
 function cardBg(flavor) {
@@ -73,7 +71,9 @@ function renderMenu() {
   const grid = document.getElementById('menuGrid');
   grid.innerHTML = cardapio.map(item => `
     <div class="menu-card reveal" onclick="addToCart('menu','${item.id}')">
-      <div class="card-img" style="background: ${cardBg(item.flavor)}">${item.emoji}</div>
+      <div class="card-img card-img-photo">
+        <img src="${item.img}" alt="${item.name}" loading="lazy" />
+      </div>
       <div class="card-body">
         <span class="flavor-tag">${item.flavor}</span>
         <div class="card-name">${item.name}</div>
@@ -92,18 +92,17 @@ function renderCombos() {
   const grid = document.getElementById('combosGrid');
   grid.innerHTML = combos.map(c => {
     const fromPrice = comboFromPrice(c);
-    const totalItems = c.marmitaQty + c.boloQty;
-    const unitLabel = totalItems > 0
-      ? fmt((fromPrice) / totalItems) + '/unid. (a partir de)'
-      : '';
+    const discPct = Math.round(c.discountPct * 100);
+    const unitFromPrice = fromPrice / c.marmitaQty;
     return `
     <div class="combo-card reveal ${c.featured ? 'featured' : ''}">
       ${c.badge ? `<div class="combo-badge">${c.badge}</div>` : ''}
       <div class="combo-top">
         <div class="combo-emoji">${c.emoji}</div>
-        <div>
+        <div class="combo-top-info">
           <div class="combo-name">${c.name}</div>
           <div class="combo-subtitle">${c.subtitle}</div>
+          <div class="combo-discount-tag">-${discPct}% no total</div>
         </div>
       </div>
       <div class="combo-body">
@@ -113,7 +112,7 @@ function renderCombos() {
             <div class="combo-price">
               <span class="from-label">a partir de</span>
               ${fmt(fromPrice)}
-              <small>${unitLabel}</small>
+              <small>${fmt(unitFromPrice)}/unid.</small>
             </div>
           </div>
           <button class="add-combo-btn" onclick="openComboModal('${c.id}')">🍱 Montar combo</button>
@@ -269,14 +268,14 @@ function updateModalState() {
   plabel.className = 'progress-label' + (totalSelected === totalNeeded ? ' ok' : totalSelected > totalNeeded ? ' over' : '');
 
   const { raw } = getModalTotals();
-  const totalDiscount = activeCombo.discountPerUnit * totalNeeded;
+  const totalDiscount = raw * activeCombo.discountPct;
   const finalPrice = Math.max(0, raw - totalDiscount);
 
   document.getElementById('modalTotal').textContent = fmt(finalPrice);
 
   const discEl = document.getElementById('modalDiscount');
   if (totalSelected > 0 && totalDiscount > 0) {
-    discEl.textContent = `Você economiza ${fmt(totalDiscount)} 🎉`;
+    discEl.textContent = `Você economiza ${fmt(totalDiscount)} (${Math.round(activeCombo.discountPct * 100)}% de desconto) 🎉`;
   } else {
     discEl.textContent = '';
   }
@@ -319,8 +318,7 @@ function confirmCombo() {
   if (!activeCombo) return;
 
   const { raw } = getModalTotals();
-  const totalDiscount = activeCombo.discountPerUnit * (activeCombo.marmitaQty + activeCombo.boloQty);
-  const finalPrice = Math.max(0, raw - totalDiscount);
+  const finalPrice = Math.max(0, raw * (1 - activeCombo.discountPct));
 
   let details = [];
   cardapio.forEach(m => {
