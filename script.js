@@ -1,9 +1,10 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm2', emoji: '🥩', name: 'Tiras de carne', desc: 'Arroz branco, feijão, carne em tiras, cenoura, brócolis', price: 21, flavor: 'Especial', img: './assets/marmita_tiras_carne.jpeg' },
-  { id: 'm1', emoji: '🍗', name: 'Strogonoff de frango', desc: 'Arroz branco, feijão, strogonoff de frango temperado, batata palha', price: 15, flavor: "Clássico", img: './assets/marmita_strogonoff_2.jpeg' },
-  { id: 'm3', emoji: '🍝', name: 'Massa penne com frango', desc: 'Massa penne, frango com molho branco', price: 13.50, flavor: "Econômico", img: './assets/marmita_massa_penne.jpeg' },
+  { id: 'm4', emoji: '🍝', name: 'Massa penne com frango', desc: 'Massa penne, frango com molho branco', price: 13.50, flavor: "Econômico", img: './assets/marmita_massa_penne.jpeg' },
+  { id: 'm3', emoji: '🍝', name: 'Carne moída com couve', desc: 'Arroz branco, feijão, carne moída, couve', price: 15, flavor: "Econômico", img: './assets/marmita_guisado_couve.jpeg' },
+  { id: 'm1', emoji: '🍗', name: 'Frango', desc: 'Arroz branco, feijão, frango temperado', price: 16, flavor: "Clássico", img: './assets/marmita_frango.jpeg' },
+  { id: 'm2', emoji: '🥩', name: 'Carne de panela', desc: 'Arroz branco, feijão, carne feito na panela de pressão', price: 18, flavor: 'Especial', img: './assets/marmita_carne_panela2.jpeg' },
 ];
 
 const combos = [
