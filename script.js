@@ -1,10 +1,13 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm4', emoji: '🍝', name: 'Massa penne com frango', desc: 'Massa penne, frango com molho branco', price: 13.50, flavor: "Econômico", img: './assets/marmita_massa_penne.jpeg' },
-  { id: 'm3', emoji: '🍝', name: 'Carne moída com couve', desc: 'Arroz branco, feijão, carne moída, couve', price: 15, flavor: "Econômico", img: './assets/marmita_guisado_couve.jpeg' },
-  { id: 'm1', emoji: '🍗', name: 'Frango', desc: 'Arroz branco, feijão, frango temperado', price: 16, flavor: "Clássico", img: './assets/marmita_frango.jpeg' },
-  { id: 'm2', emoji: '🥩', name: 'Carne de panela', desc: 'Arroz branco, feijão, carne feito na panela de pressão', price: 18, flavor: 'Especial', img: './assets/marmita_carne_panela2.jpeg' },
+  { id: 'm4', emoji: '🍝', name: 'Carne moída com couve', desc: 'Arroz, feijão, carne moída com couve', price: 15, flavor: "Econômico", img: './assets/marmita_guisado_couve.jpeg' },
+
+  { id: 'm3', emoji: '🍝', name: 'Frango desfiado ao molho', desc: 'Massa, frango desfiado ao molho', price: 16, flavor: "Econômico", img: './assets/massa_frango_desfiado.jpeg' },
+
+  { id: 'm1', emoji: '🍗', name: 'Carne moída com nhoque', desc: 'Arroz branco, feijão, carne moída com nhoque', price: 17, flavor: "Clássico", img: './assets/marmita_guisado_nhoque.jpeg' },
+
+  { id: 'm2', emoji: '🥩', name: 'Carne com moranga', desc: 'Arroz branco, feijão, carne feito na panela de pressão e moranga', price: 19, flavor: 'Especial', img: './assets/marmita_carne_panela_moranga.jpeg' },
 ];
 
 const combos = [
