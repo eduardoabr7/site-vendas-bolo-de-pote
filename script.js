@@ -1,17 +1,17 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm4', emoji: '🥩', name: 'Carne moída com couve', desc: 'Arroz, feijão, carne moída com couve', price: 15, flavor: "Econômico", img: './assets/marmita_guisado_couve.jpeg' },
+  { id: 'm4', emoji: '🥩', name: 'Strogonoff', desc: 'Arroz, feijão, strogonoff de frango', price: 15, flavor: "Clássico", img: './assets/marmita_strogonoff_2.jpeg' },
 
-  { id: 'm3', emoji: '🍝', name: 'Massa com frango desfiado ao molho', desc: 'Massa, frango desfiado ao molho', price: 16, flavor: "Econômico", img: './assets/massa_frango_desfiado.jpeg' },
-
-  { id: 'm5', emoji: '🍝', name: 'Spaghetti com frango e brócolis', desc: 'Massa Spaghetti, frango em cubos e brócolis', price: 16.5, flavor: "Econômico", img: './assets/marmita_spaguetti_frango.jpeg' },
+  { id: 'm5', emoji: '🍝', name: 'Spaghetti com frango e brócolis', desc: 'Massa Spaghetti, frango em cubos e brócolis', price: 16.5, flavor: "Clássico", img: './assets/marmita_spaguetti_frango.jpeg' },
 
   { id: 'm1', emoji: '🍗', name: 'Carne moída com nhoque', desc: 'Arroz branco, feijão, carne moída com nhoque', price: 17, flavor: "Clássico", img: './assets/marmita_guisado_nhoque.jpeg' },
 
   { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
 
   { id: 'm2', emoji: '🥩', name: 'Carne com moranga', desc: 'Arroz branco, feijão, carne feito na panela de pressão e moranga', price: 19, flavor: 'Especial', img: './assets/marmita_carne_panela_moranga.jpeg' },
+
+  { id: 'm3', emoji: '🍝', name: 'Carne com legumes', desc: 'Arroz, feijão, carne feito na panela de pressão, cenoura e batata', price: 19, flavor: "Espcial", img: './assets/marmita_carne_panela.jpeg' },
 ];
 
 const combos = [
