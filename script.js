@@ -3,15 +3,15 @@ const WHATSAPP_NUMBER = '5551997481828';
 const cardapio = [
   { id: 'm4', emoji: '🥩', name: 'Strogonoff', desc: 'Arroz, feijão, strogonoff de frango', price: 15, flavor: "Clássico", img: './assets/marmita_strogonoff_2.jpeg' },
 
-  { id: 'm5', emoji: '🍝', name: 'Spaghetti com frango e brócolis', desc: 'Massa Spaghetti, frango em cubos e brócolis', price: 16.5, flavor: "Clássico", img: './assets/marmita_spaguetti_frango.jpeg' },
+  { id: 'm5', emoji: '🍝', name: 'Spaghetti com Almôndega', desc: 'Massa Spaghetti e deliciosas almôndegas', price: 16.5, flavor: "Clássico", img: './assets/marmita_massa_almondega.jpeg' },
 
-  { id: 'm1', emoji: '🍗', name: 'Carne moída com nhoque', desc: 'Arroz branco, feijão, carne moída com nhoque', price: 17, flavor: "Clássico", img: './assets/marmita_guisado_nhoque.jpeg' },
+  // { id: 'm1', emoji: '🍗', name: 'Carne moída com nhoque', desc: 'Arroz branco, feijão, carne moída com nhoque', price: 17, flavor: "Clássico", img: './assets/marmita_guisado_nhoque.jpeg' },
 
-  { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
+  // { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
 
-  { id: 'm2', emoji: '🥩', name: 'Carne com moranga', desc: 'Arroz branco, feijão, carne feito na panela de pressão e moranga', price: 19, flavor: 'Especial', img: './assets/marmita_carne_panela_moranga.jpeg' },
+  // { id: 'm2', emoji: '🥩', name: 'Carne com moranga', desc: 'Arroz branco, feijão, carne feito na panela de pressão e moranga', price: 19, flavor: 'Especial', img: './assets/marmita_carne_panela_moranga.jpeg' },
 
-  { id: 'm3', emoji: '🍝', name: 'Carne com legumes', desc: 'Arroz, feijão, carne feito na panela de pressão, cenoura e batata', price: 19, flavor: "Espcial", img: './assets/marmita_carne_panela.jpeg' },
+  { id: 'm3', emoji: '🍝', name: 'Carne com legumes', desc: 'Arroz, feijão, carne feito na panela de pressão, cenoura e batata', price: 19, flavor: "Especial", img: './assets/marmita_carne_panela.jpeg' },
 ];
 
 const combos = [
