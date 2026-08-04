@@ -1,11 +1,13 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm5', emoji: '🍝', name: 'Macarrão com carne moída', desc: 'Massa parafuso, carne moída e legumes', price: 14, flavor: "Clássico", img: './assets/massa_guisado.jpeg' },
+  { id: 'm5', emoji: '🍝', name: 'Macarrão espaguete ao molho rose', desc: 'Massa espaguete ao molho rose com linguiça ralada', price: 15, flavor: "Clássico", img: './assets/massa_linguica.jpeg' },
 
-  { id: 'm4', emoji: '🥩', name: 'Frango cremoso', desc: 'Arroz, feijão, frango cremoso ao molho branco com milho e cenoura', price: 17, flavor: "Clássico", img: './assets/marmita_frango_cremoso.jpeg' },
+  { id: 'm4', emoji: '🍗', name: 'Frango cremoso', desc: 'Arroz, feijão, frango cremoso ao molho branco com milho e cenoura', price: 17, flavor: "Clássico", img: './assets/marmita_frango_cremoso.jpeg' },
 
-  // { id: 'm1', emoji: '🍗', name: 'Carne moída com nhoque', desc: 'Arroz branco, feijão, carne moída com nhoque', price: 17, flavor: "Clássico", img: './assets/marmita_guisado_nhoque.jpeg' },
+  { id: 'm1', emoji: '🍗', name: 'Frango desfiado', desc: 'Arroz branco, feijão, frango desfiado com milho e ervilha', price: 17, flavor: "Clássico", img: './assets/marmita_frango_desfiado.jpeg' },
+
+  { id: 'm7', emoji: '🥩', name: 'Carne com batata', desc: 'Arroz, feijão, carne de panela com batata', price: 18, flavor: "Clássico", img: './assets/marmita_carne_panela_batata.jpeg' },
 
   // { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
 
