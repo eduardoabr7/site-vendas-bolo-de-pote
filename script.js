@@ -1,19 +1,17 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm5', emoji: '🍝', name: 'Macarrão espaguete ao molho rose', desc: 'Massa espaguete ao molho rose com linguiça ralada', price: 15, flavor: "Clássico", img: './assets/massa_linguica.jpeg' },
+  { id: 'm5', emoji: '🍝', name: 'Massa com frango', desc: 'Massa parafuso com frango ao molho', price: 15, flavor: "Clássico", img: './assets/marmita_massa_frango.jpeg' },
 
-  { id: 'm4', emoji: '🍗', name: 'Frango cremoso', desc: 'Arroz, feijão, frango cremoso ao molho branco com milho e cenoura', price: 17, flavor: "Clássico", img: './assets/marmita_frango_cremoso.jpeg' },
+  { id: 'm4', emoji: '🍗', name: 'Frango com purê de batata', desc: 'Arroz branco, feijão, frango ao molho e purê de batata', price: 17, flavor: "Clássico", img: './assets/marmita_frango_pure.jpeg' },
 
-  { id: 'm1', emoji: '🍗', name: 'Frango desfiado', desc: 'Arroz branco, feijão, frango desfiado com milho e ervilha', price: 17, flavor: "Clássico", img: './assets/marmita_frango_desfiado.jpeg' },
+  { id: 'm1', emoji: '🍗', name: 'Carne de panela desfiada', desc: 'Arroz branco, feijão, carne de panela desfiada com brócolis e couve-flor', price: 19, flavor: "Clássico", img: './assets/marmita_carne_desfiada_brocolis_couveflor.jpeg' },
 
-  { id: 'm7', emoji: '🥩', name: 'Carne com batata', desc: 'Arroz, feijão, carne de panela com batata', price: 18, flavor: "Clássico", img: './assets/marmita_carne_panela_batata.jpeg' },
+    { id: 'm7', emoji: '🥩', name: 'Carne com batata', desc: 'Arroz, feijão, carne de panela com batata', price: 19.50, flavor: "Clássico", img: './assets/marmita_carne_panela_batata.jpeg' },
 
   // { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
 
   // { id: 'm2', emoji: '🥩', name: 'Carne com moranga', desc: 'Arroz branco, feijão, carne feito na panela de pressão e moranga', price: 19, flavor: 'Especial', img: './assets/marmita_carne_panela_moranga.jpeg' },
-
-  { id: 'm3', emoji: '🥩', name: 'Carne com legumes', desc: 'Arroz, feijão, carne feito na panela de pressão e legumes', price: 19, flavor: "Especial", img: './assets/marmita_carne_panela.jpeg' },
 ];
 
 const combos = [
