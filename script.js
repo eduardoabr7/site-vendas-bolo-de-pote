@@ -1,13 +1,13 @@
 const WHATSAPP_NUMBER = '5551997481828';
 
 const cardapio = [
-  { id: 'm5', emoji: '🍝', name: 'Massa com frango', desc: 'Massa parafuso com frango ao molho', price: 15, flavor: "Clássico", img: './assets/marmita_massa_frango.jpeg' },
+  { id: 'm5', emoji: '🍝', name: 'Massa com carne desfiada', desc: 'Massa espaguete com carne feito na panela de pressão desfiada', price: 16, flavor: "Clássico", img: './assets/massa_carne_desfiada.jpeg' },
 
-  { id: 'm4', emoji: '🍗', name: 'Frango com purê de batata', desc: 'Arroz branco, feijão, frango ao molho e purê de batata', price: 17, flavor: "Clássico", img: './assets/marmita_frango_pure.jpeg' },
+  { id: 'm4', emoji: '🍗', name: 'Frango com abobrinha', desc: 'Arroz branco, feijão, frango e abobrinha', price: 17, flavor: "Clássico", img: './assets/marmita_frango_abobrinha.jpeg' },
 
-  { id: 'm1', emoji: '🍗', name: 'Carne de panela desfiada', desc: 'Arroz branco, feijão, carne de panela desfiada com brócolis e couve-flor', price: 19, flavor: "Clássico", img: './assets/marmita_carne_desfiada_brocolis_couveflor.jpeg' },
+  { id: 'm1', emoji: '🍗', name: 'Panqueca', desc: 'Arroz branco, feijão, duas panquecas de carne moída', price: 18, flavor: "Clássico", img: './assets/marmita_panqueca.jpeg' },
 
-    { id: 'm7', emoji: '🥩', name: 'Carne com batata', desc: 'Arroz, feijão, carne de panela com batata', price: 19.50, flavor: "Clássico", img: './assets/marmita_carne_panela_batata.jpeg' },
+    // { id: 'm7', emoji: '🥩', name: 'Carne com batata', desc: 'Arroz, feijão, carne de panela com batata', price: 19.50, flavor: "Clássico", img: './assets/marmita_carne_panela_batata.jpeg' },
 
   // { id: 'm6', emoji: '🍗', name: 'Almôndega', desc: 'Arroz branco, feijão, almôndega ao molho vermelho', price: 18, flavor: "Clássico", img: './assets/marmita_almondega.jpeg' },
 
